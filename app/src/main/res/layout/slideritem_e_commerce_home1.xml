@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="imageSliderSliderprettydarkskiModel" type="com.valentinkt.sunapp.modules.ecommercehome.data.model.ImageSliderSliderprettydarkskiModel"/>
+    </data>
+    <FrameLayout android:id="@+id/frameStackprettydarkski"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStyledeep_orange_100cornerRadius">
+        <ImageView android:id="@+id/imagePrettydarkski"
+            android:layout_gravity="start"
+            android:layout_height="@dimen/_200pxh"
+            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_width="@dimen/_192pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_14pxh}"
+            imageUrl="@{imageSliderSliderprettydarkskiModel.imagePrettydarkski}"
+            placeHolder="@{@drawable/image_not_found}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_prettydarkski"/>
+        <ImageView android:id="@+id/imageVectorSeventy"
+            android:layout_gravity="bottom|start"
+            android:layout_height="@dimen/_143pxh"
+            android:layout_marginEnd="@dimen/_107pxh"
+            android:layout_marginStart="@dimen/_107pxh"
+            android:layout_marginTop="@dimen/_10pxv"
+            android:layout_width="@dimen/_99pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_vector70"
+            imageUrl="@{imageSliderSliderprettydarkskiModel.imageVectorSeventy}"
+            placeHolder="@{@drawable/img_vector70}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_vector70"/>
+        <TextView android:id="@+id/txtExclusiveOffer"
+            android:layout_gravity="top|end"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_40pxv"
+            android:layout_marginEnd="@dimen/_26pxh"
+            android:layout_marginStart="@dimen/_26pxh"
+            android:layout_marginTop="@dimen/_40pxv"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_5pxh"
+            android:text="@{imageSliderSliderprettydarkskiModel.txtExclusiveOffer}"
+            style="@style/txtPoppinssemibold26" tools:text="@string/msg_exclusive_offe"/>
+        <TextView android:id="@+id/txtOffer"
+            android:layout_gravity="bottom|end"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_41pxv"
+            android:layout_marginEnd="@dimen/_24pxh"
+            android:layout_marginStart="@dimen/_24pxh"
+            android:layout_marginTop="@dimen/_41pxv"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_8pxh"
+            android:text="@{imageSliderSliderprettydarkskiModel.txtOffer}"
+            style="@style/txtPoppinsmedium14" tools:text="@string/msg_get_your_1st_pl"/>
+    </FrameLayout>
+</layout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="landingPageVM" type="com.valentinkt.sunapp.modules.landingpage.data.viewmodel.LandingPageVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearLandingPage"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearLanding"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStyleblack_900_7f">
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtGreenGenie"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_62pxh"
+                android:layout_marginStart="@dimen/_62pxh"
+                android:layout_marginTop="@dimen/_152pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{landingPageVM.landingPageModel.txtGreenGenie}"
+                style="@style/txtInterbold36" tools:text="@string/lbl_greengenie"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtFarmatyourfi"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_62pxh"
+                android:layout_marginStart="@dimen/_62pxh"
+                android:layout_marginTop="@dimen/_7pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{landingPageVM.landingPageModel.txtFarmatyourfi}"
+                style="@style/txtInterregular14" tools:text="@string/msg_farm_at_your_fi"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnGetStarted"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20pxv"
+                android:layout_marginEnd="@dimen/_62pxh"
+                android:layout_marginStart="@dimen/_62pxh"
+                android:layout_marginTop="@dimen/_404pxv"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_17pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_17pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_get_started"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded" tools:text="@string/lbl_get_started"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
