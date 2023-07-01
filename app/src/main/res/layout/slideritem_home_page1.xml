@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="imageSliderSlidershadowModel" type="com.valentinkt.sunapp.modules.homepage.data.model.ImageSliderSlidershadowModel"/>
+    </data>
+    <FrameLayout android:id="@+id/frameImg"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStylecornerRadius_5">
+        <ImageView android:id="@+id/imageShadow"
+            android:layout_gravity="bottom|center"
+            android:layout_height="@dimen/_286pxh"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_marginTop="@dimen/_10pxv"
+            android:layout_width="@dimen/_305pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_12pxh}"
+            imageUrl="@{imageSliderSlidershadowModel.imageShadow}"
+            placeHolder="@{@drawable/image_not_found}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_shadow"/>
+        <FrameLayout android:id="@+id/frameStackimg"
+            android:layout_gravity="start"
+            android:layout_height="@dimen/_308pxv" android:layout_width="@dimen/_345pxh">
+            <ImageView android:id="@+id/imageImg"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_308pxh"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_12pxh}"
+                imageUrl="@{imageSliderSlidershadowModel.imageImg}"
+                placeHolder="@{@drawable/image_not_found}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_img"/>
+            <LinearLayout android:id="@+id/linearColumnnewin"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylecornerRadius_6">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtNewin"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_24pxh"
+                    android:layout_marginStart="@dimen/_24pxh"
+                    android:layout_marginTop="@dimen/_168pxv"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_6pxh"
+                    android:singleLine="true"
+                    android:text="@{imageSliderSlidershadowModel.txtNewin}"
+                    style="@style/txtPoppinsblack12" tools:text="@string/lbl_new_in"/>
+                <TextView android:id="@+id/txtNikeSBJanoski"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_24pxh"
+                    android:layout_marginStart="@dimen/_24pxh"
+                    android:layout_marginTop="@dimen/_6pxv"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_8pxh"
+                    android:text="@{imageSliderSlidershadowModel.txtNikeSBJanoski}"
+                    style="@style/txtPoppinsbold20" tools:text="@string/msg_nike_sb_janoski"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPrice"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_42pxv"
+                    android:layout_marginEnd="@dimen/_24pxh"
+                    android:layout_marginStart="@dimen/_24pxh"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_7pxh"
+                    android:singleLine="true"
+                    android:text="@{imageSliderSlidershadowModel.txtPrice}"
+                    style="@style/txtPoppinsbold14" tools:text="@string/lbl_89_95_usd"/>
+            </LinearLayout>
+        </FrameLayout>
+    </FrameLayout>
+</layout>

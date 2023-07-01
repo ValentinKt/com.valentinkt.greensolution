@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listcreatefromfraRowModel" type="com.valentinkt.sunapp.modules.recommendationsfree.data.model.ListcreatefromfraRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearCard"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <FrameLayout android:id="@+id/frameImgLike"
+            android:layout_height="@dimen/_88pxv"
+            android:layout_marginStart="@dimen/_10pxh"
+            android:layout_width="@dimen/_97pxh" style="@style/groupStylegray_50cornerRadius">
+            <View
+                android:background="@drawable/rectangle_bg_gray_50_radius_10"
+                android:id="@+id/viewCreatefromfra"
+                android:layout_gravity="bottom|start"
+                android:layout_height="@dimen/_72pxv"
+                android:layout_marginTop="@dimen/_10pxv" android:layout_width="@dimen/_97pxh"/>
+            <FrameLayout android:id="@+id/frameStackimgecheveria"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_88pxv"
+                android:layout_width="@dimen/_97pxh" style="@style/groupStylecornerRadius">
+                <ImageView android:id="@+id/imageImgEcheveria"
+                    android:layout_gravity="start"
+                    android:layout_height="@dimen/_88pxh"
+                    android:layout_width="@dimen/_97pxh"
+                    android:scaleType="fitXY"
+                    imageRes="@{@drawable/img_imgecheveria}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_imgecheveria"/>
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_white_a700_radius_6"
+                    android:id="@+id/btnVector"
+                    android:layout_gravity="bottom|end"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_marginBottom="@dimen/_8pxv"
+                    android:layout_marginEnd="@dimen/_2pxh"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_10pxv"
+                    android:layout_width="@dimen/_24pxh"
+                    android:paddingHorizontal="@dimen/_6pxh"
+                    android:paddingVertical="@dimen/_6pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_vector_gray_401" tools:ignore="ContentDescription"/>
+            </FrameLayout>
+        </FrameLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearNameRatingSiz"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_3pxv"
+            android:layout_marginStart="@dimen/_26pxh"
+            android:layout_marginTop="@dimen/_4pxv"
+            android:layout_weight="0.56" android:layout_width="0dp" android:orientation="vertical">
+            <LinearLayout android:id="@+id/linearRowecheveria"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtEcheveria"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:layout_weight="0.71"
+                    android:layout_width="0dp"
+                    android:lineSpacingExtra="@dimen/_4pxh"
+                    android:singleLine="true"
+                    android:text="@{listcreatefromfraRowModel.txtEcheveria}"
+                    style="@style/txtMontserratbold15" tools:text="@string/lbl_echeveria"/>
+                <ImageView android:id="@+id/imageStar"
+                    android:layout_height="@dimen/_13pxh"
+                    android:layout_marginBottom="@dimen/_4pxv"
+                    android:layout_marginStart="@dimen/_12pxh"
+                    android:layout_marginTop="@dimen/_3pxv"
+                    android:layout_width="@dimen/_13pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_star"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_star"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFifty"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:layout_marginStart="@dimen/_4pxh"
+                    android:layout_marginTop="@dimen/_3pxv"
+                    android:layout_weight="0.17"
+                    android:layout_width="0dp"
+                    android:lineSpacingExtra="@dimen/_3pxh"
+                    android:singleLine="true"
+                    android:text="@{listcreatefromfraRowModel.txtFifty}"
+                    style="@style/txtMontserratsemibold12" tools:text="@string/lbl_5_0"/>
+            </LinearLayout>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtFrom3Inch"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_4pxv"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_3pxh"
+                android:singleLine="true"
+                android:text="@{listcreatefromfraRowModel.txtFrom3Inch}"
+                style="@style/txtMontserratmedium12" tools:text="@string/lbl_from_3_inch"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_9pxv"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="@dimen/_3pxh"
+                android:singleLine="true"
+                android:text="@{listcreatefromfraRowModel.txtPrice}"
+                style="@style/txtMontserratmedium13" tools:text="@string/lbl_25"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

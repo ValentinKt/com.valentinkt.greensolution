@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listRowModel" type="com.valentinkt.sunapp.modules.homepage.data.model.ListRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearUIlistver"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" android:orientation="vertical">
+        <FrameLayout android:id="@+id/frameUIlistthumb"
+            android:layout_height="@dimen/_150pxv" android:layout_width="@dimen/_150pxh">
+            <FrameLayout android:id="@+id/framePlaceholder"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_150pxv"
+                android:layout_width="@dimen/_150pxh" style="@style/groupStylegray_900_0ccornerRadius">
+                <ImageView android:id="@+id/imageFolder"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_42pxh"
+                    android:layout_marginBottom="@dimen/_40pxv"
+                    android:layout_marginEnd="@dimen/_30pxh"
+                    android:layout_marginStart="@dimen/_30pxh"
+                    android:layout_marginTop="@dimen/_40pxv"
+                    android:layout_width="@dimen/_90pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_folder_gray_900"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_folder_gray_900"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/frameImg"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_150pxv"
+                android:layout_width="@dimen/_150pxh" style="@style/groupStylecornerRadius_5">
+                <ImageView android:id="@+id/imageRectangleNine"
+                    android:layout_gravity="start"
+                    android:layout_height="@dimen/_150pxh"
+                    android:layout_width="@dimen/_150pxh"
+                    android:scaleType="fitXY"
+                    cornerRadius="@{@dimen/_12pxh}"
+                    imageRes="@{@drawable/img_rectangle9}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle9"/>
+                <View
+                    android:background="@drawable/rectangle_bg_gray_900_0c_radius_12"
+                    android:id="@+id/viewRectangleTen"
+                    android:layout_gravity="start"
+                    android:layout_height="@dimen/_150pxh" android:layout_width="@dimen/_150pxh"/>
+            </FrameLayout>
+        </FrameLayout>
+        <TextView android:ellipsize="end" android:id="@+id/txtName"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_marginTop="@dimen/_10pxv"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_6pxh"
+            android:singleLine="true"
+            android:text="@{listRowModel.txtName}"
+            style="@style/txtPoppinsmedium12_3" tools:text="@string/lbl_dose_media"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtEleanorPena"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_marginTop="@dimen/_3pxv"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_6pxh"
+            android:singleLine="true"
+            android:text="@{listRowModel.txtEleanorPena}"
+            style="@style/txtPoppinslight11" tools:text="@string/lbl_eleanor_pena"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtPriceOne"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_marginTop="@dimen/_1pxv"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_7pxh"
+            android:singleLine="true"
+            android:text="@{listRowModel.txtPriceOne}"
+            style="@style/txtPoppinsblack14" tools:text="@string/lbl_23"/>
+    </LinearLayout>
+</layout>
